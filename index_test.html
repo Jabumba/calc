@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+      .div_1 {
+        list-style: none;
+        width: 412px;
+        margin-left: 35%;
+        height: 674px;
+        background-color: #ccc6be;
+        border-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        padding-top: 10px;
+        position: relative;
+    }
+
+      input {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        bottom: 10px;
+        left: 0px;
+        width: 408px;
+        height: 60px;
+        font-size: 54px;
+        position: relative;
+      }
+
+      button {
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        font-size: 26px;
+      }
+
+      ul {
+        bottom: 8px;
+        background-color: gren;
+        width: 412px;
+        height: 600px;
+        position: relative;
+      }
+
+      .butt_2_1 {
+        top: 3px;
+      }
+
+      .butt_3_1 {
+        top: 3px;
+      }
+
+      .butt_1_2 {
+        top: 3px;
+      }
+
+      .butt_2_2 {
+        top: 3px;
+      }
+
+      .butt_3_2 {
+        top: 3px;
+      }
+
+      .butt_4_2 {
+        top: 3px;
+      }
+
+      .butt_1_3 {
+        top: 6px;
+      }
+
+      .butt_2_3 {
+        top: 6px;
+      }
+
+      .butt_3_3 {
+        top: 6px;
+      }
+
+      .butt_4_3 {
+        top: 6px;
+      }
+
+      .butt_1_4 {
+        top: 9px;
+      }
+
+      .butt_2_4 {
+        top: 9px;
+      }
+
+      .butt_3_4 {
+        top: 9px;
+      }
+
+      .butt_4_4 {
+        top: 9px;
+      }
+
+      .butt_1_5 {
+        top: 12px;
+      }
+
+      .butt_2_5 {
+        top: 12px;
+      }
+
+      .butt_3_5 {
+        top: 12px;
+      }
+
+      .butt_4_5 {
+        top: 12px;
+        background-color: #1241de;
+      }
+
+      .butt_4_5:hover {
+        background-color: #4d6cd1;
+      }
+
+      #div_2 {
+        background-color: green;
+        width: 100px;
+        height: 100px;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="div_1">
+      <input  id="input_1" type="text" placeholder="0">
+      <ul>
+        <button onclick="funt('%')" class="butt_1_0" type="button" name="button">%</button>
+        <button onclick="funt('CE')" class="butt_2_0" type="button" name="button">CE</button>
+        <button onclick="funt('C')" class="butt_3_0" type="button" name="button">C</button>
+        <button onclick="funt('!')" class="butt_4_0" type="button" name="button">!</button> <br>
+
+        <button onclick="funt('1/x')" class="butt_1_1" type="button" name="button">1/x</button>
+        <button onclick="funt('x2')" class="butt_2_1" type="button" name="button">X<sup>2</sup> </button>
+        <button onclick="funt('(x2)2')" class="butt_3_1" type="button" name="button">(X<sup>2</sup>)<sup>2</sup></button>
+        <button onclick="funt('/')" class="butt_4_1" type="button" name="button">:</button> <br>
+
+        <button onclick="funt(7)" class="butt_1_2" type="button" name="button">7</button>
+        <button onclick="funt(8)" class="butt_2_2" type="button" name="button">8</button>
+        <button onclick="funt(9)" class="butt_3_2" type="button" name="button">9</button>
+        <button onclick="funt('*')" class="butt_4_2" type="button" name="button">*</button> <br>
+
+        <button onclick="funt(4)" class="butt_1_3" type="button" name="button">4</button>
+        <button onclick="funt(5)" class="butt_2_3" type="button" name="button">5</button>
+        <button onclick="funt(6)" class="butt_3_3" type="button" name="button">6</button>
+        <button onclick="funt('-')" class="butt_4_3" type="button" name="button">-</button> <br>
+
+        <button onclick="funt(1)" class="butt_1_4" type="button" name="button">1</button>
+        <button onclick="funt(2)" class="butt_2_4" type="button" name="button">2</button>
+        <button onclick="funt(3)" class="butt_3_4" type="button" name="button">3</button>
+        <button onclick="funt('+')" class="butt_4_4" type="button" name="button">+</button> <br>
+
+        <button onclick="funt('%')" class="butt_1_5" type="button" name="button">+/-</button>
+        <button onclick="funt('%')" class="butt_2_5" type="button" name="button">0</button>
+        <button onclick="funt('%')" class="butt_3_5" type="button" name="button">,</button>
+        <button onclick="funt('%')" class="butt_4_5" type="button" name="button">=</button>
+      </ul>
+    </div>
+
+    <div onclick="divver()" id="div_2" class="">
+
+    </div>
+
+    <script type="text/javascript">
+    let sum = ''
+    let myArray = []
+    function funt(unc) {
+      if(unc == '%') {
+        // myArray.length += 1
+        // myArray[myArray.length - 1] = unc
+        // myArray += unc;
+        myArray.push(unc)
+        myArray.map((i) => sum += i);
+        console.log(sum)
+        myArray.pop()
+        // document.getElementById('input_1').value = sum
+        // myArray = []
+      }
+      // else if(unc == 'CE') {
+      //   myArray.length = 1
+      //   myArray[0] = 0
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == '!') {
+      //   myArray[myArray.length -= 1]
+      //   console.log(myArray)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == '1/x') {
+      //   myArray[myArray.length - 1] /= 2
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 'x2') {
+      //   let i = myArray[myArray.length - 1]
+      //   myArray[myArray.length - 1] = Math.pow(i, 2)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == '(x2)2') {
+      //   let i = myArray[myArray.length - 1]
+      //   myArray[myArray.length - 1] = Math.pow(i, 4)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == '/') {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 7) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 8) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 9) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == '*') {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 4) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 5) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 6) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == '-') {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 1) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 2) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == 3) {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+      // else if(unc == '+') {
+      //   myArray.push(unc)
+      //   document.getElementById('input_1').value = myArray
+      // }
+    }
+    </script>
+</body>
+</html>
